@@ -1,11 +1,10 @@
-import React from 'react'
 import Section from './Section'
 
 function Skills() {
     return (
         <Section title='Skills' anchor="skills">
-            <div className="grid grid-cols-2 gap-10">
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+                <div className='w-full'>
                     <h3 className='font-bold text-lg my-6 text-green-400'> Android </h3>
                     <div className='flex flex-col'>
                         <Skill title='Languages' items={['Java', 'Kotlin']} />
@@ -40,9 +39,9 @@ function Skills() {
 
 function Skill({ title, items }: { title: string, items: string[] }) {
     return (
-        <div className='flex rounded-sm gap-3'>
-            <div className='py-4 text-slate-400 min-w-[120px]'> {title}: </div>
-            <div className='py-4'> {items.join(', ')} </div>
+        <div className='flex flex-col md:flex-row rounded-sm md:gap-3 md:py-0'>
+            <div className='md:py-4 py-2 text-slate-400 '> {title}: </div>
+            <div className='md:py-4 py-2'> {items.join(', ')} </div>
         </div>
     )
 }

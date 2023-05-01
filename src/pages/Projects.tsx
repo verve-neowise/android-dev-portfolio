@@ -10,7 +10,7 @@ import Section from './Section'
 function Projects() {
     return (
         <Section title='Projects' anchor='projects'>
-            <div className='grid grid-cols-2 gap-16 p-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-16 '>
 
                 <App
                     name='Tracko'
@@ -57,7 +57,7 @@ function App(
         { name: string, image: string, source: string, playPage: string, desc: string }
 ) {
     return (
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 w-full'>
             <img src={image} className='w-full rounded-lg' />
             <div className="flex justify-between items-center">
                 <h3 className='text-2xl font-semibold'> {name} </h3>

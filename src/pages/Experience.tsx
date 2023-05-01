@@ -4,7 +4,7 @@ import Section from './Section'
 function Experience() {
     return (
         <Section title='Experience' anchor="experience">
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                 <Job
                     name='Multibranch Online Services'
                     website='www.mbos.uz'
@@ -98,8 +98,8 @@ function Job(
     const [expanded, setExpanded] = useState(false)
 
     return (
-        <div className='p-6 border border-white/10 rounded-md'>
-            <div className="flex justify-between items-center 6">
+        <div className='border border-white/10 p-3 md:p-3 rounded-md'>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                 <h3 className="text-xl text-green-400"> {name} </h3>
                 <div className='text-sm text-white/40'> {date} </div>
             </div>
@@ -133,7 +133,7 @@ function Job(
                 </div>
 
                 <div 
-                    className="mt-5 cursor-pointer text-white/50"
+                    className="mt-5 cursor-pointer text-slate-400"
                     onClick={() => setExpanded((prev) => !prev)}>
                     More details
                 </div>
@@ -141,6 +141,5 @@ function Job(
         </div>
     )
 }
-
 
 export default Experience

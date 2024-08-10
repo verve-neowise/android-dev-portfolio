@@ -5,10 +5,23 @@ function Experience() {
     return (
         <Section title='Experience' anchor="experience">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+            <Job
+                    name='AX Technology'
+                    date='June 2023 - Now'
+                    responsibility="Android Team Lead"
+                    technologies={["Android SDK", "Kotlin Coroutines", "UDF", "MVVM", "Firebase Cloud Messaging", "Dagger2", "Room", "Apollo GraphQL", "Picasso", "Jetpack Compose", "Multi module architecture", "Socket.IO"]}
+                >
+                    <ul className='flex flex-col gap-2 list-disc pl-10'>
+                        <li>
+                        Development and support of the company's internal mobile application.
+                        </li>
+                    </ul>
+                </Job>
+
                 <Job
                     name='Multibranch Online Services'
                     website='www.mbos.uz'
-                    date='Sep 2022 - Now'
+                    date='Sep 2022 - May 2023'
                     responsibility="Android Developer"
                     technologies={["Android SDK", "Kotlin Coroutines", "MVVM", "Firebase Cloud Messaging", "Dagger2", "Room", "Retrofit2", "Picasso"]}
                 >
@@ -95,7 +108,7 @@ function Job(
         : { name: string, website?: string, date: string, responsibility: string, technologies?: string[] | string, children: React.ReactNode }
 ) {
 
-    const [expanded, setExpanded] = useState(false)
+    const [expanded, setExpanded] = useState(true)
 
     return (
         <div className='border border-white/10 p-3 md:p-3 rounded-md'>

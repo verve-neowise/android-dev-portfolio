@@ -26,7 +26,7 @@ function Hero() {
                 <a className='w-[100px]' href="https://github.com/verve-neowise">
                     <img src={githubIcon} />
                 </a>
-                <a className='w-[100px]' href="www.linkedin.com/in/imomaddinov-jaloladdin-9b4439266">
+                <a className='w-[100px]' href="https://www.linkedin.com/in/imomaddinov-jaloladdin-9b4439266">
                     <img src={linkedInIcon} />
                 </a>
                 <a className='w-[100px]' href="https://t.me/verve-code">

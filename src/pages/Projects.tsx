@@ -98,13 +98,9 @@ function App(
                     }
                 </div>
             </div>
-            (
-                desc ? (
-                    <p>
-                        {desc}
-                    </p>
-                ) ?: undefined
-            )
+            {
+                desc && (<p>{desc}</p>)
+            }
             <div className="flex gap-2 flex-wrap">
                 {
                     instrumentals?.map(instrumental => (

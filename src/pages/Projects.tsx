@@ -19,7 +19,6 @@ function Projects() {
                     name='Taskie'
                     image={tasks}
                     instrumentals={['Kotlin', 'Android', 'Jetpack Compose', 'Jetpack Components', 'FCM', 'Retrofit2', 'Picasso', 'MVVM', 'Koin', 'Kotlin Coroutines']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
                 <App
@@ -27,7 +26,6 @@ function Projects() {
                     image={mbos}
                     playPage='https://play.google.com/store/apps/details?id=com.umega&hl=ru&gl=US'
                     instrumentals={['Kotlin', 'Android', 'FCM', 'Retrofit2', 'Picasso', 'MVVM', 'Dagger Hilt', 'Kotlin Coroutines']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
                 <App
@@ -35,7 +33,6 @@ function Projects() {
                     image={uzmega}
                     playPage='https://play.google.com/store/apps/details?id=com.umega&hl=ru&gl=US'
                     instrumentals={['Kotlin', 'Android', 'Firebase Auth', 'FCM', 'Retrofit2', 'MVVM', 'Kotlin Coroutines', 'Node.js', 'PostgreSQL']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
                 <App
@@ -43,7 +40,6 @@ function Projects() {
                     image={tracko}
                     source='source'
                     instrumentals={['Kotlin', 'Android', 'Firebase Storage', 'Retrofit2', 'MVVM', 'Goolgle Maps', 'Node.js', 'PostgreSQL']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
                 <App
@@ -51,14 +47,12 @@ function Projects() {
                     image={spic}
                     source='source'
                     instrumentals={['Kotlin', 'Android', 'Firebase Storage', 'Coroutines', 'OkHttp', 'Node.js', 'PostgreSQL']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
                 <App
                     name='Kino Cat'
                     image={kinoCat}
                     source='source'
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
 
 
@@ -67,7 +61,6 @@ function Projects() {
                     image={midapp}
                     source='source'
                     instrumentals={['Java', 'Spring', 'Hibernate', 'JavaFX']}
-                    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo, autem officia tenetur nam suscipit rerum deleniti quae dolorem animi at incidunt eveniet! Praesentium repellendus, accusantium illo doloremque eos accusamus."
                 />
             </div>
         </Section>
@@ -79,7 +72,7 @@ function Projects() {
 
 function App(
     { name, image, source, playPage, desc, instrumentals }:
-        { name: string, image: string, source?: string, playPage?: string, desc: string, instrumentals?: string[] }
+        { name: string, image: string, source?: string, playPage?: string, desc?: string, instrumentals?: string[] }
 ) {
     return (
         <div className='flex flex-col gap-3 w-full'>
@@ -105,9 +98,13 @@ function App(
                     }
                 </div>
             </div>
-            <p>
-                {desc}
-            </p>
+            (
+                desc ? (
+                    <p>
+                        {desc}
+                    </p>
+                ) ?: undefined
+            )
             <div className="flex gap-2 flex-wrap">
                 {
                     instrumentals?.map(instrumental => (
